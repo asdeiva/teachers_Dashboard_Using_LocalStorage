@@ -1,10 +1,10 @@
 let greet = document.getElementById("greet");
 
 let masterData = JSON.parse(localStorage.getItem("users"));
-let data = JSON.parse(localStorage.getItem("currentUser"));
+let crntData = JSON.parse(localStorage.getItem("currentUser"));
 
-let crntName = data[0].username;
-let email = data[0].email;
+let crntName = crntData[0].username;
+let email = crntData[0].email;
 
 displayinfo(crntName, email);
 
@@ -23,20 +23,26 @@ function changePass() {
     alert("Incorrect password");
   } else {
     if (newpass == confirmnew) {
-      objIndex = masterData.findIndex((obj) => obj.pass == pwd);
-
       //Update password to new one
-      masterData[objIndex].pass = confirmnew;
+      usrIndex = masterData.findIndex((obj) => obj.pass == pwd);     
+      masterData[usrIndex].pass = confirmnew;
       console.log(masterData);
       localStorage.setItem("users", JSON.stringify(masterData));
-      let data = JSON.parse(localStorage.getItem("currentUser"));
-      data[0].pass = confirmnew;
+
+      //update password on current user also
+      crntUsrIndex = crntData.findIndex((obj) => obj.pass == pwd);     
+      crntData[usrIndex].pass = confirmnew;
+      console.log(crntData);
+      localStorage.setItem("users", JSON.stringify(crntData));
+      alert("Password changed Successfully")
+     
+      
     }
   }
 }
 
 function logout() {
-  window.location.href = "/index.html";
+  window.location.href = "./index.html";
   localStorage.removeItem("currentUser");
 }
 
