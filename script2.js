@@ -32,10 +32,9 @@ function changePass() {
       //update password on current user also
       crntUsrIndex = crntData.findIndex((obj) => obj.pass == pwd);     
       crntData[usrIndex].pass = confirmnew;
+      alert("Password changed Successfully")
       console.log(crntData);
       localStorage.setItem("users", JSON.stringify(crntData));
-      alert("Password changed Successfully")
-     
       
     }
   }
