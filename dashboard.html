@@ -1,52 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teacher's Portal</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onunload="logout()">
     <div class="navbar">
-        <div class="title">
-         <a href="#"> Teacher Portal</a>
-        </div>
-        <div class="links">
-            <a href="./index.html">Sign Up</a>
-            <a href="./login.html">Login</a>
-        </div>
+      <div class="title">
+        <a href="#"> Teacher Portal</a>
+      </div>
+      <div class="links">
+        <a href="./index.html" id="signupLink">Sign Up</a>
+        <a href="./login.html" id="loginLink">Login</a>
+      </div>
     </div>
 
     <div class="signup">
-        <div class="signup-title">
-            <h6>Teachers Dashboard</h6>
-        </div>
-        <div class="greet">
-            <p>Welcome back <span id="teacherName"></span></p>
-            <p>Your Email ID : <span id="teacherEmail"></span></p>
-        </div><br>
-        <div class="signUpForm">
-            <h3>Teachers Dashboard</h3>
-            <form>
-                <div class="password">
-                    <input type="text" name="OldPassword id="OldPassword" placeholder="Old Password">
-                </div>
-                <div class="password">
-                    <input type="text" name="NewPassword id="NewPassword" placeholder="New Password">
-                </div>
-                <div class="cpassword">
-                    <input type="text" name="cNewPassword id="cNewPassword" placeholder="Confirm  New Password">
-                </div>
-                <div class="signupBtn" >
-                    <button id="signupBtn" class="btn">Change</button> <br> <br>
-                    <button id="signupBtn" class="btn">Logout</button>
-                    <!-- <input type="button" value="SignUp"> -->
-                </div>
-            </form>
-        </div>
+      <div class="signup-title">
+        <h6>Teachers Dashboard</h6>
+      </div>
+      <div id="greet">
+        <!-- <p>Welcome Back <span id="txt1"></span></p> <p>Your Email ID : <span id="txt2"></span></p> -->
+      </div>
+      <br />
+      <div class="signUpForm">
+        <h3>Teachers Dashboard</h3>
+        <form>
+          <div class="password">
+            <input
+              type="text"
+              name="OldPassword"
+              id="OldPassword"
+              placeholder="Old Password"
+            />
+          </div>
+          <div class="password">
+            <input
+              type="text"
+              name="NewPassword"
+              id="NewPassword"
+              placeholder="New Password"
+            />
+          </div>
+          <div class="cpassword">
+            <input
+              type="text"
+              name="cNewPassword"
+              id="cNewPassword"
+              placeholder="Confirm  New Password"
+            />
+          </div>
+          <div class="signupBtn">
+            <!-- <button id="changePass" class="btn">Change</button> <br> <br>
+                    <button id="logoutBtn" class="btn">Logout</button> -->
+            <input
+              type="button"
+              class="btn"
+              value="Change"
+              onclick="changePass()"
+            />
+            <br />
+            <input
+              type="button"
+              class="btn"
+              value="Logout"
+              onclick="logout()"
+            />
+          </div>
+        </form>
+      </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <script src="script2.js"></script>
+  </body>
 </html>

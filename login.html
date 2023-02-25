@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teacher's Portal</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="navbar">
-        <div class="title">
-         <a href="#"> Teacher Portal</a>
-        </div>
-        <div class="links">
-            <a href="./index.html">Sign Up</a>
-            <a href="./login.html">Login</a>
-        </div>
+      <div class="title">
+        <a href="#"> Teacher Portal</a>
+      </div>
+      <div class="links">
+        <a href="./index.html">Sign Up</a>
+        <a href="./login.html">Login</a>
+      </div>
     </div>
 
     <div class="signup">
-        <div class="signup-title">
-            <p>Teachers Login</p>
-        </div>
-        <div class="signUpForm">
-            <form onsubmit="login()">
-                <div class="email">
-                    <input type="loginEmail" name="email" id="loginEmail" placeholder="Email">
-                </div>
-                <div class="password">
-                    <input type="text" name="password" id="loginPassword" placeholder="Password">
-                </div>
-                <div class="signupBtn" >
-                    <button id="loginBtn" class="btn">Login</button>
-                    <!-- <input type="button" value="SignUp"> -->
-                </div>
-            </form>
-        </div>
+      <div class="signup-title">
+        <p>Teachers Login</p>
+      </div>
+      <div class="signUpForm">
+        <form>
+          <div class="email">
+            <input
+              type="loginEmail"
+              name="email"
+              id="loginEmail"
+              placeholder="Email"
+            />
+          </div>
+          <div class="password">
+            <input
+              type="text"
+              name="password"
+              id="loginPassword"
+              placeholder="Password"
+            />
+          </div>
+          <div class="signupBtn">
+            <!-- <button id="loginBtn" class="btn">Login</button> -->
+            <input class="btn" type="button" onclick="login()" value="Login" />
+          </div>
+        </form>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
